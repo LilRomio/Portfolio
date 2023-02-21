@@ -57,8 +57,8 @@ const Testimonial = () => {
       )}
 
       <div className="app__testimonial-brands app__flex">
-        {brands.map((brand) => (
-          <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5, type: 'tween' }} key={brand.id}>
+        {brands.map((brand, index) => (
+          <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5, type: 'tween' }} key={index}>
             <img src={urlFor(brand.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
