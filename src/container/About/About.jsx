@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+
+import { AppWrap, MotionWrap } from '../../wrapper';
 import './About.scss';
-import { images } from '../../constants';
 import { urlFor, client } from '../../client';
 
-function About() {
+const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
 
-    client.fetch(query).then((data) => setAbouts(data));
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
   }, []);
 
   return (
     <>
       <h2 className="head-text">
-        I Know That <span>Good Apps</span> <br /> means <span>Good Business</span>
+        I Know that <span>Good Design</span> <br />
+        means <span>Good Business</span>
       </h2>
 
       <div className="app__profiles">
@@ -24,10 +28,7 @@ function About() {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            transition={{
-              duration: 0.5,
-              type: 'tween',
-            }}
+            transition={{ duration: 0.5, type: 'tween' }}
             className="app__profile-item"
             key={about.title + index}
           >
@@ -43,6 +44,6 @@ function About() {
       </div>
     </>
   );
-}
+};
 
-export default About;
+export default AppWrap(MotionWrap(About, 'app__about'), 'about', 'app__whitebg');
