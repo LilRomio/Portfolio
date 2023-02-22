@@ -53,7 +53,9 @@ const Skills = () => {
                       <h4 className="bold-text" id={work.name}>
                         {work.name}
                       </h4>
-                      <ReactTooltip anchorId={`${work.name}`}> {work.desc}</ReactTooltip>
+                      <ReactTooltip className="skills-tooltip" anchorId={`${work.name}`}>
+                        {work.desc}
+                      </ReactTooltip>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
                   </React.Fragment>
