@@ -11,6 +11,10 @@
   background-color: var(--primary-color);
 }
 
+.app__blackbg {
+  background-color: var(--black-color);
+}
+
 .app__container {
   width: 100%;
   min-height: 100vh;
@@ -47,7 +51,7 @@
 
   p {
     text-transform: uppercase;
-    color: var(--black-color);
+    color: var(--tertiary-color);
   }
 }
 
@@ -55,7 +59,7 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: var(--black-color);
+  color: var(--head-color);
   text-transform: capitalize;
 
   span {
@@ -74,7 +78,7 @@
 .p-text {
   font-size: 0.8rem;
   text-align: left;
-  color: var(--gray-color);
+  color: var(--p-color);
   line-height: 1.5;
 
   @media screen and (min-width: 2000px) {
@@ -85,7 +89,7 @@
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--black-color);
+  color: var(--head-color);
   text-align: left;
 
   @media screen and (min-width: 2000px) {
