@@ -4,7 +4,7 @@
   --font-base: 'DM Sans', sans-serif;
 
   --primary-color: #edf2f8;
-  --secondary-color: #313bac;
+  --secondary-color: #2e91dd;
   --tertiary-color: #828fff;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
@@ -15,11 +15,12 @@
 
 #theme-root[data-theme='light'] {
   --primary-color: #edf2f8;
-  --secondary-color: #313bac;
+  --secondary-color: #2e91dd;
   --tertiary-color: #6b7688;
   --head-color: #030303;
   --p-color: #6b7688;
-
+  --input-color: #e4e4e4;
+  --hoover-color: #2e91dd;
   --black-color: #030303;
   --white-color: #f7f8f8;
 }
@@ -30,7 +31,8 @@
   --tertiary-color: #828fff;
   --head-color: #828fff;
   --p-color: #828fff;
-
+  --input-color: #828fff;
+  --hoover-color: #828fff;
   --black-color: #030303;
   --white-color: #f7f8f8;
 }
