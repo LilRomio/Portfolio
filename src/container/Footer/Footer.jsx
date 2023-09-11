@@ -47,26 +47,62 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      {!isFormSubmitted ? (
-        <div className="app__footer-form app__flex">
+     {!isFormSubmitted ? (
+        <form
+          className="app__footer-form app__flex"
+          target="_blank"
+          action="https://formsubmit.co/popescu.romeo9@gmail.com"
+          method="POST"
+        >
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="name" value={name} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="text"
+              placeholder="Nume"
+              name="name"
+              value={name}
+              onChange={handleChangeInput}
+              required
+            />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
+              required
+            />
           </div>
+         
           <div>
-            <textarea className="p-text" placeholder="Your Message" value={message} name="message" onChange={handleChangeInput} />
+            <textarea
+              className="p-text"
+              placeholder="Mesajul tau"
+              value={message}
+              name="message"
+              onChange={handleChangeInput}
+              required
+            />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
-            {loading ? 'Sending' : 'Send Message'}
-          </button>
-        </div>
+
+         
+          {true ? (
+            <button className="p-text">{'Trimite Mesaj'}</button>
+          ) : (
+            <button type="submit" className="p-text" onClick={handleSubmit}>
+              {loading ? 'Se trimite' : 'Trimite Mesaj'}
+            </button>
+          )}
+        </form>
       ) : (
         <div>
-          <h3 className="head-text">Thank you for getting in touch</h3>
+          <h3 className="head-text">Multumim pentru mesaj!</h3>
         </div>
       )}
+
       <div className="copyright">
         <p className="p-text">@2023 ROMEO</p>
         <p className="p-text">All rights reserved</p>
