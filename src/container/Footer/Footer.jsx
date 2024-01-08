@@ -58,7 +58,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Nume"
+              placeholder="Name"
               name="name"
               value={name}
               onChange={handleChangeInput}
@@ -80,7 +80,7 @@ const Footer = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Mesajul tau"
+              placeholder="Your Message"
               value={message}
               name="message"
               onChange={handleChangeInput}
