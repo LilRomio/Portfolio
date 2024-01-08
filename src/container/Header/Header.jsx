@@ -55,4 +55,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Header, 'home'), 'app__primarybg');
+export default AppWrap(MotionWrap(Header, 'home'), 'home', 'app__primarybg');

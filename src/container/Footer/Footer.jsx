@@ -90,10 +90,10 @@ const Footer = () => {
 
          
           {true ? (
-            <button className="p-text">{'Trimite Mesaj'}</button>
+            <button className="p-text">{'Send Message'}</button>
           ) : (
             <button type="submit" className="p-text" onClick={handleSubmit}>
-              {loading ? 'Se trimite' : 'Trimite Mesaj'}
+              {loading ? 'Sending' : 'Send Message'}
             </button>
           )}
         </form>

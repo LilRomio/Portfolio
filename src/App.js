@@ -8,7 +8,7 @@ import './App.css';
 import './App.scss';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  console.log(isDarkMode);
+  
   return (
     <div className="app" id="theme-root" data-theme={isDarkMode ? 'dark' : 'light'}>
       <ColorModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
