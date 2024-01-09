@@ -3,12 +3,23 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
+
+
+ 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    
+    message: '',
+  });
+
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
-  const { name, email, message } = formData;
+  const { name, email,  message } = formData;
+
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
 
@@ -17,19 +28,9 @@ const Footer = () => {
 
   const handleSubmit = () => {
     setLoading(true);
-
-    const contact = {
-      _type: 'contact',
-      name: name,
-      email: email,
-      message: message,
-    };
-
-    client.create(contact).then(() => {
-      setLoading(false);
-      setIsFormSubmitted(true);
-    });
   };
+
+
   return (
     <>
       <h2 className="head-text">Take a coffee & chat with me</h2>
@@ -99,7 +100,7 @@ const Footer = () => {
         </form>
       ) : (
         <div>
-          <h3 className="head-text">Multumim pentru mesaj!</h3>
+          <h3 className="head-text">Thank you for reaching out!</h3>
         </div>
       )}
 
