@@ -2,9 +2,10 @@
   position: relative;
   background: url('../../assets/bgIMG.png');
   background-size: cover;
-  background-repeat: repeat;
   background-position: center;
+  background-repeat: repeat;
 
+  // disable the default padding styles
   .app__wrapper {
     padding: 0;
 
@@ -19,7 +20,8 @@
   width: 100%;
   height: 100%;
   flex-direction: row;
-  padding: 6rem 2rem 0;
+
+  padding: 6rem 2rem 0rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -29,8 +31,8 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: 400px) {
-    padding: 6rem 1rem 2rem;
+  @media screen and (max-width: 450px) {
+    padding: 5rem 2rem 2rem;
   }
 }
 
@@ -42,9 +44,11 @@
   align-items: flex-start;
   height: 100%;
 
-  @media screen and (max-width: 2000px) {
+  margin: 0 2rem;
+
+  @media screen and (max-width: 1200px) {
     width: 100%;
-    margin-right: 0rem;
+    margin: 0rem 0rem;
   }
 }
 
@@ -57,12 +61,20 @@
 
   .badge-cmp,
   .tag-cmp {
-    padding: 1rem 2rem;
-    border: var(--white-color);
+    padding: 1rem 1rem;
+    background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    p {
+      width: 100%;
+
+      text-align: right;
+      margin-top: 2px;
+    }
   }
 
   .tag-cmp {
@@ -71,8 +83,8 @@
 
     p {
       width: 100%;
-      text-transform: uppercase;
-      text-align: right;
+
+      text-align: start;
     }
   }
 
@@ -103,41 +115,48 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: var(--tertiary-color);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    background: var(--white-color);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
     img {
-      width: 60%;
-      height: 60%;
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
     }
   }
 
+  // circles with different height & width
+
   div:nth-child(1) {
-    width: 200px;
-    height: 200px;
-  }
-  div:nth-child(2) {
-    margin: 1.75rem;
-    width: 300px;
-    height: 300px;
-  }
-  div:nth-child(3) {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
   }
 
-  @media screen and (min-width: 2000px) {
-    div:nth-child(1) {
+  div:nth-child(2) {
+    width: 130px;
+    height: 130px;
+  }
+
+  div:nth-child(3) {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    div:nth-child(2) {
       width: 400px;
       height: 400px;
     }
-    div:nth-child(2) {
+
+    div:nth-child(3) {
       width: 170px;
       height: 170px;
     }
-    div:nth-child(3) {
-      width: 200px;
-      height: 200px;
+
+    div:nth-child(1) {
+      width: 250px;
+      height: 250px;
     }
   }
 
@@ -146,18 +165,25 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 0;
+    display: flex;
+
     div {
       margin: 1rem;
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: none;
   }
 }
 
 .app__header-img {
   flex: 1;
   height: 100%;
+
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
 
   img {
