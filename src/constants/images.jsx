@@ -17,7 +17,7 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
-import angular from '../assets/angular.svg';
+import angular from '../assets/angular.jpeg';
 
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
