@@ -31,8 +31,16 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {skills.map((skill) => (
             <React.Fragment key={skill.name}>
-              <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }} className="app__skills-item app__flex" key={skill.name}>
-                <div className="app__flex" style={{ backgroundColor: skill.bgColor }}>
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 0.5 }}
+                className="app__skills-item app__flex"
+                key={skill.name}
+              >
+                <div
+                  className="app__flex"
+                  style={{ backgroundColor: skill.bgColor }}
+                >
                   <img src={urlFor(skill.icon)} alt={skill.name} />
                 </div>
                 <p className="p-text">{skill.name}</p>
@@ -40,6 +48,7 @@ const Skills = () => {
             </React.Fragment>
           ))}
         </motion.div>
+
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
@@ -49,11 +58,19 @@ const Skills = () => {
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work, index) => (
                   <React.Fragment key={work.name}>
-                    <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5 }} className="app__skills-exp-work" key={work.name}>
+                    <motion.div
+                      whileInView={{ opacity: [0, 1] }}
+                      transition={{ duration: 0.5 }}
+                      className="app__skills-exp-work"
+                      key={work.name}
+                    >
                       <h4 className="bold-text" id={work.name}>
                         {work.name}
                       </h4>
-                      <ReactTooltip className="skills-tooltip" anchorId={`${work.name}`}>
+                      <ReactTooltip
+                        className="skills-tooltip"
+                        anchorId={`${work.name}`}
+                      >
                         {work.desc}
                       </ReactTooltip>
                       <p className="p-text">{work.company}</p>
@@ -69,4 +86,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Skills, 'app__skills'), 'skills', 'app__primarybg');
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  'app__primarybg'
+);

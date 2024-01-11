@@ -1,4 +1,4 @@
 import AppWrap from './AppWrap';
 import MotionWrap from './MotionWrap';
-
-export { AppWrap, MotionWrap };
+import ParticlesAnimation from './ParticlesAnimation';
+export { AppWrap, MotionWrap, ParticlesAnimation };
