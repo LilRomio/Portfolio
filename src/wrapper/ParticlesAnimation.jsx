@@ -1,6 +1,5 @@
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
-import { useCallback, useMemo } from 'react';
 
 function ParticlesAnimation() {
   async function loadParticles(main) {

@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <a href="/">
-          <img src={images.logo} alt="logo" width="120" height="40" />
+          <img src={images.logo} alt="logo" />
         </a>
       </div>
       <ul className="app__navbar-links">
