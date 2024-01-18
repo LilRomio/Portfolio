@@ -31,7 +31,7 @@ function App() {
           <div
             className="app"
             id="theme-root"
-            data-theme={isDarkMode ? 'dark' : 'light'}
+            data-theme={isDarkMode ? 'light' : 'dark'}
           >
             <ColorModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
               <Navbar />

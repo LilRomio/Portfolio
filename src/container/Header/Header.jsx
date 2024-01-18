@@ -31,16 +31,16 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <Lottie style={{ width: 60 }} animationData={Doggo} />
+            <Lottie style={{ width: 120 }} animationData={Doggo} />
 
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hello, I am</p>
+              <h3 className="p-text">Hello, I am</h3>
               <h1 className="head-text">Romeo</h1>
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Junior Web Developer</p>
-            <p className="p-text">Freelancer</p>
+            <h3 className="p-text">Junior Web Developer</h3>
+            <h4 className="p-text">Freelancer</h4>
           </div>
         </div>
       </motion.div>
