@@ -18,7 +18,7 @@
   margin: 4em 2rem 2rem;
 
   .app__footer-card {
-    min-width: 290px;
+    min-width: 250px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -33,9 +33,9 @@
     transition: all 0.3s ease-in-out;
 
     img {
-      width: 40px;
-      height: 40px;
-      margin: 0 0.7rem;
+      width: 30px;
+      height: 30px;
+      margin: 0 0.7rem 0 0;
     }
 
     p {
