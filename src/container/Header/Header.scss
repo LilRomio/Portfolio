@@ -193,9 +193,6 @@
     z-index: 1;
     border-radius: 0.5rem;
     opacity: 0.5;
-    animation: header-image-animation linear forwards;
-    animation-timeline: view();
-    animation-range: exit;
   }
 
   .overlay_circle {
@@ -206,6 +203,9 @@
     z-index: 0;
     width: 100%;
     height: 90%;
+    animation: header-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
   }
 
   @keyframes fade-out {
@@ -221,7 +221,7 @@
     85%,
     100% {
       opacity: 0;
-      scale: 1.5;
+      scale: 2;
     }
   }
 
