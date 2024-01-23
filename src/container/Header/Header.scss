@@ -58,6 +58,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   flex-direction: column;
+  padding-right: 20px;
 
   .badge-cmp,
   .tag-cmp {
@@ -191,7 +192,8 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
-    border-radius: 0.5rem;
+
+    transition: 0.3s ease-out;
   }
 
   .overlay_circle {
